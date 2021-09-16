@@ -2,7 +2,7 @@
  * @ Copyright 2020
  */
 
-#include "ethernet_interface.hpp" 
+#include "interfacesocket.hpp" 
 
 sock::EthernetInterface::EthernetInterface () {
     fprintf(stdout, "Starting socket ...\n");
