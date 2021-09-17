@@ -48,19 +48,72 @@ namespace sock {
 
 class EthernetInterface{
  public:
+    /**
+     * @brief Construct a new Ethernet Interface object
+     * 
+     */
     EthernetInterface();
+
+    /**
+     * @brief Destroy the Ethernet Interface object
+     * 
+     */
     ~EthernetInterface();
+
+    /**
+     * @brief Create a socket object
+     * 
+     * @param ip_server 
+     * @param port 
+     * @param protocol 
+     */
     void create_socket(std::string ip_server, int port, bool protocol);
+
+    /**
+     * @brief Create a socket object
+     * 
+     * @param port 
+     * @param protocol 
+     */
     void create_socket(int port, bool protocol);
+
+    /**
+     * @brief 
+     * 
+     * @param msg 
+     * @param len_buffer 
+     * @param len_msg 
+     * @return int 
+     */
     int net_send(uint8_t *msg, unsigned int len_buffer, int unsigned len_msg);
+
+    /**
+     * @brief 
+     * 
+     * @param msg 
+     * @param len_buffer 
+     * @param len_msg 
+     * @return int 
+     */
     int net_recv(uint8_t *msg, unsigned int len_buffer, int unsigned len_msg);
 
  private:
+    /** remote_addr variable */
     struct sockaddr_in remote_addr;
+
+    /** remote_addr variable */
     struct sockaddr_in local_addr;
+
+    /** remote_addr variable */
     int port;
+
+    /** remote_addr variable */
     int localfd = 1;
+
+    /** remote_addr variable */
     int remotefd = 1;
+
+    /** remote_addr variable */
     bool prtlc;
 };
 }  // namespace sock
