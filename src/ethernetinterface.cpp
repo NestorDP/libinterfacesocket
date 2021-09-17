@@ -2,7 +2,7 @@
  * @ Copyright 2020
  */
 
-#include "interfacesocket.hpp" 
+#include "ethernetinterface.hpp" 
 
 sock::EthernetInterface::EthernetInterface () {
     fprintf(stdout, "Starting socket ...\n");
@@ -39,12 +39,12 @@ void sock::EthernetInterface::create_socket(std::string ip_server, int port, boo
         printf("Connection established with the server\n");
     }
     else{
-        if ((this->remotefd = socket(AF_INET,  SOCK_DGRAM, 0)) == -1) {
-            perror("\e[1;31mError on client socket creation:");
-            printf("\e[0m");
-            exit (EXIT_FAILURE);
-        }
-        printf("Client socket created with fd: %d\n", this->remotefd);
+        // if ((this->remotefd = socket(AF_INET,  SOCK_DGRAM, 0)) == -1) {
+        //     perror("\e[1;31mError on client socket creation:");
+        //     printf("\e[0m");
+        //     exit (EXIT_FAILURE);
+        // }
+        // printf("Client socket created with fd: %d\n", this->remotefd);
     }
     return;
 }
@@ -97,7 +97,7 @@ void sock::EthernetInterface::create_socket(int port, bool protocol){
         //     printf("\e[0m");
         //     exit (EXIT_FAILURE);
         // }
-        // printf("Client socket created with fd: %d\n", this->serverfd);
+        // printf("Server socket created with fd: %d\n", this->serverfd);
     }
     return;
 }

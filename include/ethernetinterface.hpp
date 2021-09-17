@@ -2,6 +2,13 @@
  * @ Copyright 2020
  */
 
+/**
+ * @mainpage Ethernet Interface Library Documentation
+ * @section intro_sec Indroduction
+ * This is the ethernet interface C++ library for socket communication
+ * 
+ * 
+ */
 #ifndef _ETHERNET_INTERFACE_HPP_
 #define _ETHERNET_INTERFACE_HPP_
 
@@ -26,8 +33,18 @@
 #define TCP 1
 #define UDP 0
 
+/**
+ * @brief Ethernet Interface Library namespace
+ * @author Nestor Pereira Neto
+ * 
+ */
 
 namespace sock {
+
+/**
+ * @brief EthernetInterface class 
+ * 
+ */
 
 class EthernetInterface{
  public:
