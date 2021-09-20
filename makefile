@@ -1,3 +1,15 @@
+ ##
+ ## @file environment.mk
+ ## @brief Environment variables and definitions for the build system
+ ##
+ ## Insert detailed descritpion here
+ ## 
+ ##
+
+ ##
+ ## @cond
+ ##
+
 
 PROJECT = libinterfacesocket
 CC = g++

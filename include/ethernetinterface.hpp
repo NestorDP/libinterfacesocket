@@ -101,19 +101,19 @@ class EthernetInterface{
     /** remote_addr variable */
     struct sockaddr_in remote_addr;
 
-    /** remote_addr variable */
+    /** local_addr variable */
     struct sockaddr_in local_addr;
 
-    /** remote_addr variable */
+    /** port variable */
     int port;
 
-    /** remote_addr variable */
-    int localfd = 1;
+    /** localfd variable */
+    int sockfd = 1;
 
-    /** remote_addr variable */
-    int remotefd = 1;
+    /** remotefd variable */
+    int serverfd = 1;
 
-    /** remote_addr variable */
+    /** prtlc variable */
     bool prtlc;
 };
 }  // namespace sock
